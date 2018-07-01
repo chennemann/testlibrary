@@ -1,2 +1,3 @@
 configurations.all {
+    exclude group: 'org.junit', module: 'junit'
 }

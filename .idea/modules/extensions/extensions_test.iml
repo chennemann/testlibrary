@@ -29,7 +29,9 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../../extensions/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../extensions/src/test" />
+    <content url="file://$MODULE_DIR$/../../../extensions/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../extensions/src/test/kotlin" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="extensions_main" />
