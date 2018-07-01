@@ -4,6 +4,5 @@ ext.plugins = [
         "org.jetbrains.kotlin:kotlin-gradle-plugin:$version_kotlin",
         "org.jetbrains.kotlin:kotlin-allopen:$version_kotlin",
         "org.jetbrains.kotlin:kotlin-noarg:$version_kotlin",
-        "org.springframework.boot:spring-boot-gradle-plugin:$version_spring_boot",
         "com.jfrog.bintray.gradle:gradle-bintray-plugin:$version_bintray_plugin"
 ]

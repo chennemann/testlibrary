@@ -1,8 +1,6 @@
 apply from: "$configDir/global/versions.gradle"
 apply from: "$configDir/internal/repositories.gradle"
 apply from: "$configDir/internal/kotlin.gradle"
-apply from: "$configDir/internal/spring.gradle"
-apply from: "$configDir/internal/artifactory.gradle"
 apply from: "$configDir/internal/testing.gradle"
 apply from: "$configDir/internal/excludes.gradle"
 

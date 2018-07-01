@@ -8,17 +8,6 @@ ext {
     // Kotlin
     version_kotlin = "1.2.50"
 
-    // Spring
-    version_spring_boot = '2.0.3.RELEASE'
-    version_spring_cloud = 'Finchley.RELEASE'
-    version_spring_security_oauth_autoconfigure = "$version_spring_boot"
-
-    // Mongo
-    version_mongo_driver = "3.7.0"
-
-    // Helper
-    version_kotlin_logging = '1.5.4'
-
     // Test
     version_junit_jupiter = '5.2.0'
     version_junit_platform = '1.2.0'
