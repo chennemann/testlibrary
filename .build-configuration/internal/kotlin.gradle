@@ -1,0 +1,28 @@
+apply plugin: "kotlin"
+apply plugin: "kotlin-spring"
+apply plugin: "kotlin-jpa"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version_kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$version_kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$version_kotlin"
+
+    implementation "io.github.microutils:kotlin-logging:$version_kotlin_logging"
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
+}
+
+compileKotlin {
+    kotlinOptions {
+        allWarningsAsErrors = true
+        apiVersion = "1.2"
+        languageVersion = "1.2"
+        verbose = true
+        noReflect = true
+        jvmTarget = "1.8"
+    }
+}
+

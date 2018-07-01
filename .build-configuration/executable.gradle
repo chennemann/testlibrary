@@ -1,0 +1,25 @@
+apply from: "$configDir/internal/common.gradle"
+
+bootJar {
+    launchScript()
+}
+
+springBoot {
+    buildInfo()
+}
+
+dependencies {
+
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+
+    // The "application-*" projects import every other sub-project except for other "application-* projects
+    rootProject.subprojects.each {
+        if (!it.name.startsWith("application")) {
+            implementation it
+        }
+    }
+}
+
+clean.doFirst {
+    delete "$rootDir/build"
+}

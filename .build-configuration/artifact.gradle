@@ -1,0 +1,29 @@
+apply from: "$configDir/internal/common.gradle"
+apply from: "$configDir/internal/bintray.gradle"
+
+
+bootJar {
+    enabled = false
+}
+
+jar {
+    enabled = true
+}
+
+
+bootRun {
+    enabled = false
+}
+
+project.afterEvaluate {
+    def projectDependencies = configurations.compile.allDependencies.findAll { it instanceof ProjectDependency }
+
+    projectDependencies.each {
+        Project dependentProject = it.getDependencyProject()
+        if (dependentProject.path.endsWith("-admin")) {
+            logger.error("Only the executable modules are allowed to declare dependencies on *-admin modules")
+            throw new GradleException("Only the executable modules are allowed to declare dependencies on *-admin modules")
+        }
+    }
+}
+

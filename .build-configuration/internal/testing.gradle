@@ -1,0 +1,27 @@
+dependencies {
+    // JUnit
+    testImplementation "org.junit.platform:junit-platform-runner:$version_junit_platform"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$version_junit_jupiter"
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$version_junit_jupiter"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$version_junit_jupiter"
+
+    // Spring
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+
+    // Kluent
+    testImplementation "org.amshove.kluent:kluent:$version_kluent"
+}
+
+test {
+    failFast = true
+
+    useJUnitPlatform {
+        includeEngines 'junit-jupiter'
+    }
+
+    setMaxParallelForks(Runtime.runtime.availableProcessors().intdiv(2) ?: 1 as int)
+
+    reports{
+        html.enabled = true
+    }
+}

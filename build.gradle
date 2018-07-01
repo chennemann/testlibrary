@@ -1,91 +1,19 @@
-buildscript {
+buildscript { scriptHandler ->
+    ext.configDir = "$rootDir/.build-configuration"
 
-    ext.kotlin_version = '1.2.50'
-    ext.bintray_version = '1.8.3'
+    apply from: "$configDir/global/plugin_repositories.gradle", to: scriptHandler
+    apply from: "$configDir/global/plugins.gradle"
 
-    repositories {
-        jcenter()
-    }
+    def plugins = ext.plugins
 
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$bintray_version"
+        plugins.each { classpath(it) }
     }
 }
 
-apply plugin: "kotlin"
-apply plugin: "java-library"
-apply plugin: 'com.jfrog.bintray'
+ext.configDir = "$rootDir/.build-configuration"
 
-apply plugin: "maven"
-apply plugin: "maven-publish"
-
-
-group 'de.chennemann'
-version '1.0.0-SNAPSHOT'
-
-
-task sourcesJar(type: Jar, dependsOn: classes) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-
-
-
-
-publishing {
-    publications {
-        maven(MavenPublication) {
-            from components.java
-            groupId 'de.chennemann'
-            artifactId 'testlibrary'
-            version '1.0.0-SNAPSHOT'
-            artifact sourcesJar
-            artifact javadocJar
-            pom {
-                name = "Testlibrary"
-                licenses {
-                    license {
-                        name = "The Apache License, Version 2.0"
-                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-                    }
-                }
-                developers {
-                    developer {
-                        name = "Christoph Hennemann"
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-bintray {
-    user = 'chennemann'
-    key = 'de0e7eb1437aac7da9ddb6f203ce4f091de54017'
-    publications = ['maven']
-    pkg {
-        repo = 'maven'
-        name = 'Testlibrary'
-        licenses = ['Apache-2.0']
-        vcsUrl = "https://github.com/chennemann/testlibrary.git"
-        version {
-            name = '1.0.0-SNAPSHOT'
-        }
-    }
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib"
+wrapper {
+    gradleVersion = "$version_gradle"
+    distributionType = Wrapper.DistributionType.ALL
 }

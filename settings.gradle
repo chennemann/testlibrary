@@ -1,2 +1,5 @@
-rootProject.name = 'testlibrary'
+rootProject.name = 'utils'
+
+enableFeaturePreview('STABLE_PUBLISHING')
+include 'extensions'
 
