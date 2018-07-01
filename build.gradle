@@ -75,6 +75,7 @@ bintray {
         repo = 'maven'
         name = 'Testlibrary'
         licenses = ['Apache-2.0']
+        vcsUrl = "https://github.com/chennemann/testlibrary.git"
         version {
             name = '1.0.0-SNAPSHOT'
         }
