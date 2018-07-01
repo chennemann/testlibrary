@@ -1,5 +1,6 @@
-rootProject.name = 'utils'
-
 enableFeaturePreview('STABLE_PUBLISHING')
+
+rootProject.name = 'utils'
 include 'extensions'
+include 'logging'
 
