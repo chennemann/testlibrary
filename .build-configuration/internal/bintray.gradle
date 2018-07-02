@@ -13,18 +13,19 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
     from javadoc.destinationDir
 }
 
+ext.artifactId = project.name
 
 publishing {
     publications {
         maven(MavenPublication) {
             from components.java
-            groupId group
-            artifactId project.name
-            version version
+            groupId this.group
+            artifactId this.artifactId
+            version this.version
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = project.name
+                name = this.artifactId
                 licenses {
                     license {
                         name = "The Apache License, Version 2.0"
@@ -45,15 +46,15 @@ publishing {
 
 bintray {
     user = 'chennemann'
-    key = 'de0e7eb1437aac7da9ddb6f203ce4f091de54017'
+    key = "$bintrayApiKey"
     publications = ['maven']
     pkg {
         repo = 'maven'
-        name = project.name
+        name = this.artifactId
         licenses = ['Apache-2.0']
         vcsUrl = "https://github.com/chennemann/utils.git"
         version {
-            name = version
+            name = this.version
         }
     }
 }
