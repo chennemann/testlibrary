@@ -6,7 +6,7 @@ ext {
     version_bintray_plugin = "1.8.3"
 
     // Kotlin
-    version_kotlin = "1.2.50"
+    version_kotlin = "1.2.51"
 
     // Test
     version_junit_jupiter = '5.2.0'

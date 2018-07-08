@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/extensions.iml" filepath="$PROJECT_DIR$/.idea/modules/extensions.iml" group="extensions" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/extensions/extensions.iml" filepath="$PROJECT_DIR$/.idea/modules/extensions/extensions.iml" group="extensions" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/extensions/extensions_main.iml" filepath="$PROJECT_DIR$/.idea/modules/extensions/extensions_main.iml" group="extensions" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/extensions/extensions_test.iml" filepath="$PROJECT_DIR$/.idea/modules/extensions/extensions_test.iml" group="extensions" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging.iml" filepath="$PROJECT_DIR$/.idea/modules/logging.iml" group="logging" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging/logging.iml" filepath="$PROJECT_DIR$/.idea/modules/logging/logging.iml" group="logging" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging/logging_main.iml" filepath="$PROJECT_DIR$/.idea/modules/logging/logging_main.iml" group="logging" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging/logging_test.iml" filepath="$PROJECT_DIR$/.idea/modules/logging/logging_test.iml" group="logging" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plannr-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/plannr-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils.iml" filepath="$PROJECT_DIR$/utils.iml" />
     </modules>
   </component>

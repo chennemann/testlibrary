@@ -1,0 +1,1 @@
+C:\Development\chennemann\plannr\utils\logging\build\classes\kotlin\main\de\chennemann\utils\logging\LoggingUtilsKt$logger$1.class;C:\Development\chennemann\plannr\utils\logging\build\classes\kotlin\main\de\chennemann\utils\logging\LoggingUtilsKt.class
