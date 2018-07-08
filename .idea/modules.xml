@@ -8,7 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging/logging.iml" filepath="$PROJECT_DIR$/.idea/modules/logging/logging.iml" group="logging" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging/logging_main.iml" filepath="$PROJECT_DIR$/.idea/modules/logging/logging_main.iml" group="logging" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/logging/logging_test.iml" filepath="$PROJECT_DIR$/.idea/modules/logging/logging_test.iml" group="logging" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/plannr-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/plannr-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils.iml" filepath="$PROJECT_DIR$/utils.iml" />
     </modules>
   </component>

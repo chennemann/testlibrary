@@ -2,10 +2,9 @@ apply from: "$configDir/artifact.gradle"
 
 ext {
     version_log4j = "2.11.0"
+    version_log4j_kotlin = "1.0.1-SNAPSHOT"
 }
 
 dependencies {
-    implementation "org.apache.logging.log4j:log4j-api-kotlin:1.0"
-    implementation "org.apache.logging.log4j:log4j-api:$version_log4j"
-    implementation "org.apache.logging.log4j:log4j-core:$version_log4j"
+    implementation "org.apache.logging.log4j:log4j-api-kotlin:$version_log4j_kotlin"
 }

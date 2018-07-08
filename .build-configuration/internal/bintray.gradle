@@ -48,6 +48,7 @@ bintray {
     user = 'chennemann'
     key = "$bintrayApiKey"
     publications = ['maven']
+    publish = true
     pkg {
         repo = 'maven'
         name = this.artifactId
@@ -57,4 +58,22 @@ bintray {
             name = this.version
         }
     }
+}
+
+task publishArtifact {
+    group 'publishing'
+
+    dependsOn 'clean'
+    dependsOn 'build'
+    dependsOn 'sourcesJar'
+    dependsOn 'javadocJar'
+    dependsOn 'generatePomFileForMavenPublication'
+    dependsOn 'bintrayUpload'
+
+    tasks.findByName('build').mustRunAfter 'clean'
+    tasks.findByName('sourcesJar').mustRunAfter 'build'
+    tasks.findByName('javadocJar').mustRunAfter 'build'
+    tasks.findByName('generatePomFileForMavenPublication').mustRunAfter 'sourcesJar'
+    tasks.findByName('generatePomFileForMavenPublication').mustRunAfter 'javadocJar'
+    tasks.findByName('bintrayUpload').mustRunAfter 'generatePomFileForMavenPublication'
 }

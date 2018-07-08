@@ -1,4 +1,8 @@
 repositories {
     jcenter()
+    maven {
+        // Apache Snapshot Repository - Needed until log4j-api-kotlin is officially released
+        url "https://repository.apache.org/content/repositories/snapshots/"
+    }
     mavenLocal()
 }
