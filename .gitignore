@@ -53,8 +53,6 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 ### Kotlin template
-# Compiled class file
-*.class
 
 # Log file
 *.log
@@ -102,7 +100,6 @@ $RECYCLE.BIN/
 *.lnk
 ### Gradle template
 .gradle
-/build/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -127,3 +124,4 @@ gradle-app.setting
 # Package Files #
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+**/build/
