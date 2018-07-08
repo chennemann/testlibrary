@@ -1,10 +1,13 @@
 apply from: "$configDir/artifact.gradle"
 
 ext {
+    version_jansi = "1.17.1"
     version_log4j = "2.11.0"
     version_log4j_kotlin = "1.0.1-SNAPSHOT"
 }
 
 dependencies {
+    implementation "org.fusesource.jansi:jansi:$version_jansi"
+    implementation "org.apache.logging.log4j:log4j-web:$version_log4j"
     implementation "org.apache.logging.log4j:log4j-api-kotlin:$version_log4j_kotlin"
 }
