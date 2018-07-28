@@ -58,7 +58,7 @@ private constructor(private val config: Configuration?, private val formats: Arr
         this.textRenderer = loadMessageRenderer(if (noLookupsIdx >= 0) ArrayUtils.remove(formats, noLookupsIdx) else formats)
 
         val discoveredPid = ProcessIdUtil.getProcessId()
-        val paddingSize = 75 + discoveredPid.length
+        val paddingSize = 85 + discoveredPid.length
         val paddingBuilder = StringBuilder(paddingSize)
         for (i in 0 until paddingSize) {
             paddingBuilder.append(" ")
@@ -156,7 +156,7 @@ private constructor(private val config: Configuration?, private val formats: Arr
 
             val message = toAppendTo.toString()
 
-            resultBuilder.append(wrapAndIndentString(message, padding, 120))
+            resultBuilder.append(wrapAndIndentString(message, padding, 110))
         }
     }
 
@@ -196,7 +196,7 @@ private constructor(private val config: Configuration?, private val formats: Arr
             val lineCount = lines.size
             for (i in 0 until lineCount) {
                 val appendingLine = lines[i]
-                resultBuilder.append(appendingLine)
+                resultBuilder.append(appendingLine.trim())
                 if (i < lineCount - 1) {
                     resultBuilder.append(Strings.LINE_SEPARATOR)
                     resultBuilder.append(indent)
