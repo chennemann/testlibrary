@@ -1,7 +1,5 @@
 package de.chennemann.utils.logging
 
-import kotlin.reflect.full.companionObject
-import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.kotlin.KotlinLogger
 import org.apache.logging.log4j.kotlin.loggerOf
 
