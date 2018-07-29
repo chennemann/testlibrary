@@ -1,2 +1,2 @@
-version = "1.0.12"
+version = "1.0.13"
 apply from: "$configDir/artifact.gradle"

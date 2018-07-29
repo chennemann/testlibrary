@@ -11,5 +11,6 @@ ext {
     // Test
     version_junit_jupiter = '5.2.0'
     version_junit_platform = '1.2.0'
-    version_kluent = '1.38'
+    version_kluent = '1.40'
+    version_mockito_kotlin = '1.6.0'
 }

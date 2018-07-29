@@ -19,3 +19,13 @@ compileKotlin {
     }
 }
 
+compileTestKotlin {
+    kotlinOptions {
+        allWarningsAsErrors = true
+        apiVersion = "1.2"
+        languageVersion = "1.2"
+        verbose = true
+        noReflect = true
+        jvmTarget = "1.8"
+    }
+}

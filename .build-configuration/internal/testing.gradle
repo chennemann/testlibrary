@@ -7,6 +7,9 @@ dependencies {
 
     // Kluent
     testImplementation "org.amshove.kluent:kluent:$version_kluent"
+
+    // Mockito Kotlin
+    testImplementation "com.nhaarman:mockito-kotlin:$version_mockito_kotlin"
 }
 
 test {
